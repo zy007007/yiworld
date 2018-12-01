@@ -1,6 +1,6 @@
 import models
 from flask import Flask
-from views import login, main, daily
+from views import login, main, backend
 from config.ext import db, bootstrap, user_login_manager, mongo
 from flask_script import Shell, Manager
 from flask_migrate import Migrate, MigrateCommand
@@ -24,6 +24,7 @@ mongo.init_app(app)
 
 app.register_blueprint(login.bp)
 app.register_blueprint(main.bp)
+app.register_blueprint(backend.bp)
 
 manager = Manager(app)
 
