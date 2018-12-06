@@ -26,7 +26,7 @@ def backend():
 @login_required
 def daily_cost():
     user = current_user.name
-    dailycost = DailycostDoc.objects().all()
+    dailycost = DailycostDoc.objects().order_by('-date').all()
     return tmpl(user=user, dailycost=dailycost)
 
 
