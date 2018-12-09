@@ -1,0 +1,115 @@
+﻿{% extends 'layout.html' %}
+{% block head %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/picture_home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/picture_home/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/picture_home/css/icofont.css">
+    <link rel="stylesheet" href="/static/picture_home/css/meanmenu.min.css">
+    <link rel="stylesheet" href="/static/picture_home/css/slick.css">
+    <link rel="stylesheet" href="/static/picture_home/css/owl.carousel.css">
+    <link rel="stylesheet" href="/static/picture_home/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/picture_home/css/animate.css">
+    <link rel="stylesheet" href="/static/picture_home/css/animated-headlines.css">
+    <link rel="stylesheet" href="/static/picture_home/css/shortcode/shortcodes.css">
+    <link rel="stylesheet" href="/static/picture_home/style.css">
+    <link rel="stylesheet" href="/static/picture_home/css/responsive.css">
+    <script src="/static/picture_home/js/vendor/modernizr-2.8.3.min.js"></script>
+{% endblock %}
+{% block users %}
+    <header>
+        <nav id="header-top" class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navigation"
+                            aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="">小毅</a></li>
+                        <li><a href="">小时英姿</a></li>
+                        <li><a href="">初中风采</a></li>
+                        <li><a href="">高中飘过</a></li>
+                        <li><a href="">大学躺混</a></li>
+                        <li><a href="">如今姿态</a></li>
+                        <li><a href="">下一站</a></li>
+                        <li><a class="download-btn" href="{{ url_for('main.home') }}">返回主页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <section class="screenshot-area pt-130 pb-130">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-xs-12">
+				<div class="screenshot-slider">
+					<div class="single-screenshot">
+						<div class="image">
+							<img src="/static/picture_home/img/tmp/xiao.jpg" alt="">
+						</div>
+					</div>
+					<div class="single-screenshot">
+						<div class="image">
+							<img src="/static/picture_home/img/tmp/chu.jpg" alt="">
+						</div>
+					</div>
+					<div class="single-screenshot">
+						<div class="image">
+							<img src="/static/picture_home/img/tmp/gao.jpg" alt="">
+						</div>
+					</div>
+					<div class="single-screenshot">
+						<div class="image">
+							<img src="/static/picture_home/img/tmp/daxue.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    </section>
+{% endblock %}
+{% block script %}
+    <!-- all js here -->
+<script src="/static/picture_home/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/static/picture_home/js/bootstrap.min.js"></script>
+<script src="/static/picture_home/js/owl.carousel.min.js"></script>
+<script src="/static/picture_home/js/slick.min.js"></script>
+<script src="/static/picture_home/js/jquery.ajaxchimp.min.js"></script>
+<script src="/static/picture_home/js/plugins.js"></script>
+<script src="/static/picture_home/js/main.js"></script>
+<!-- map js -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
+<script>
+	/*START CONTACT MAP JS*/
+	function initialize() {
+	  var mapOptions = {
+		zoom: 12,
+		scrollwheel: false,
+		center: new google.maps.LatLng(43.538263, -80.305922)
+	  };
+	  var map = new google.maps.Map(document.getElementById('map'),
+		  mapOptions);
+	  var marker = new google.maps.Marker({
+		position: map.getCenter(),
+		icon: 'img/icon/map-icon.png',
+		map: map
+	  });
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+   /*END CONTACT MAP JS*/
+</script>--->
+
+{% endblock %}
