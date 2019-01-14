@@ -40,3 +40,22 @@ def daily_cost_add():
         cost.save()
         return redirect(url_for('backend.daily_cost'))
     return tmpl(form=form)
+
+
+@bp.route("/daily/analysis", methods=['GET', 'POST'])
+@login_required
+def daily_analysis():
+    cost = DailycostDoc.objects().all()
+    sums1, sums2 = 0.0, 0.0
+    month1, month2 = '2018-12', '2019-01'
+    result = []
+    for c1 in cost:
+        if month1 in str(c1.date):
+            sums1 += c.money
+    result.append((month1, sums1))
+    for c2 in cost:
+        if month2 in str(c2.date):
+            sums2 += c.money
+    result.append((month2, sums2))
+    return tmpl(result=result)
+    
